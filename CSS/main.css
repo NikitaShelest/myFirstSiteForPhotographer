@@ -1,0 +1,751 @@
+* {
+    margin: 0 !important;
+    padding: 0  !important;
+    
+
+}
+
+/*Общие стили*/
+h1, h2, h3, h4 ,h5, h6 {
+    font-family: "Segoe UI", serif !important;
+    color: black;
+
+}
+
+p{
+    font-family: Roboto, serif !important;
+    color: black;
+}
+
+
+li a {
+    font-family: BlinkMacSystemFont, serif !important;
+    color: black;
+}
+
+a {
+    color: black;
+    font-family: Roboto, serif;
+}
+
+
+/*Стили для кнопок смены дизайна*/
+.changeDesign {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+}
+
+.changeDesign #Light, .changeDesign #Dark {
+    border: none;
+    padding: 5px !important;
+    outline: none;
+    width: 30px;
+}
+
+.changeDesign #Light {
+    background-color: white;
+    color: black;
+}
+
+.changeDesign #Dark {
+    background-color: black;
+    color: white;
+}
+
+/*Стили сетки*/
+
+body {
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+
+/*Стили для шапки*/
+
+header .main-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+header .main-menu li {
+    list-style: none;
+    margin: 0;
+    width: 200px; 
+}
+
+/*стили для выпадающего списка*/
+header .galery-button{
+    position: relative;
+    width: 200px;
+    z-index: 2;
+}
+/*Стиль для выпадающего списка*/
+header .main-menu li .list-menu {
+    display: none;
+    position: absolute;
+}
+
+header .main-menu .galery-button:hover .list-menu {
+    display: block;
+    width: 200px;
+    background-color: rgba(131, 126, 126, 0.3);
+}
+
+
+
+header .main-menu li a {
+    box-sizing: border-box;
+    font-family: Helvetica,  sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    transition: .15s background; 
+}
+
+header .main-menu li a:hover {
+    box-sizing: border-box;
+    background-color: rgba(131, 126, 126, 0.5);
+    border-bottom: 4px solid gray;
+    color: rgba(131, 126, 126, 0.3) !important;
+}
+
+/*Стили для футера*/
+
+footer {
+    background-color: rgba(131, 126, 126, 0.5);
+    margin-top: 25vh !important;
+    
+}
+
+footer .container {
+    width: 90%;
+    margin: 0 auto !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(224, 209, 209);
+}
+
+footer .container .socialButton a{
+    margin-right: 15px !important;
+}
+
+
+/*Отдельные стили для галлереи*/
+.galery {
+    margin-top: 50px !important;
+    
+}
+
+.galery .btn-remove {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: red;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    display: none;
+
+}
+
+.galery h1  {
+    text-align: center;
+    margin-bottom: 50px !important;
+    font-size: 40px;
+    letter-spacing: 20px;
+}
+
+.galery h3 {
+    text-align: center;
+    margin-bottom: 50px !important;
+    font-size: 28px;
+    letter-spacing: 15px;
+}
+
+.galery .photo-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.galery .photo-items .item {
+    margin-top: 10px !important;
+    position: relative;
+    
+}
+
+.galery .photo-items img {
+    max-width: 350px;
+}
+
+.galery  .photo-items .item:hover .btn-remove {
+    display: block;
+}
+
+/* Стили пагинации */
+
+.pagination .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px !important;
+    margin-bottom:  -50px !important;
+}
+
+.pagination .links .link {
+    background-color: gray;
+    margin-left: 20px !important;
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    
+}
+
+.pagination .links a {
+    text-decoration: none;
+}
+
+/* Стили для красивого эфекта при наведении */
+
+/*.galery .photo-items:hover img {
+    opacity: 0.3;
+    transition: .8s opacity;
+}
+
+.galery .photo-items:hover img:hover {
+    opacity: 1;
+} */
+
+
+/*Стили для формы регистрации*/
+
+.form-registration .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.form-registration .container form {
+    width: 50%;
+}
+
+.form-registration .container h2 {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 5px;
+    margin-bottom: 25px !important;
+}
+
+.form-registration .container label {
+    font-size: 20px;
+    color: black;
+}
+
+.form-registration .container input {
+    width: 100%;
+    padding: 10px !important;
+    border:none;
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.1);
+    color: black;
+}
+
+.form-registration .container input::placeholder {
+    color: gray;
+    opacity: 0.8;
+    font-family: Roboto, serif;
+}
+
+.form-registration .container button {
+    margin-top: 40px !important;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+    border: none;
+    height: 50px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    transition: .8s background;
+
+}
+
+.form-registration .container button:hover {
+    background-color: rgba(128, 128, 128, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Стили для контактов */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact h1 {
+    margin-top: 50px !important;
+    margin-bottom: 60px !important;
+}
+
+.contact .item { 
+    height: 50px;
+    min-width: 25%;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.contact .item a{
+    display: inline-block;
+    margin-top: 10px !important;
+}
+
+.contact .item .left-icon {
+    position: absolute;
+    left: -50px;
+}
+
+.contact .item .right-icon {
+    position: absolute;
+    right: -50px;
+}
+
+
+.contact .item:hover {
+    background: rgba(0, 4, 255, 0.541);
+    border-radius: 45px;
+    color: rgba(255, 255, 255, 1);
+
+}
+
+.contact .item:hover a {
+    color: rgba(255, 255, 255, 1);
+    font-size: 17px;
+    transform: 3s;
+}
+
+.contact .item a{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.contact .item a img {
+    width: 100px;
+}
+
+/*Стили админ панели*/
+
+.main h1 {
+    text-align: center;
+    margin-top: 35px !important;
+}
+
+.main .container-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main .edit-about {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .edit-about textarea {
+    height: 100px;
+}
+
+
+.main .container-box table tr {
+    border: 2px solid gray;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+.main .container-box table td {
+    display: inline-block;
+    box-sizing: border-box;
+    color: black;
+    font-size: 20px;
+    overflow: hidden;
+    width: 150px;
+    margin-right: 20px !important;
+}
+
+.main .container-box table td button {
+    font-size: 13px;
+    border: none;
+    padding: 5px !important;
+    color: white;
+}
+
+.main .container-box table td .accept {
+    background-color: green;
+}
+.main .container-box table td .delete {
+    background-color: red;
+}
+
+.abs_link_back {
+    color: black;
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+}
+
+.abs_link_out {
+    color: black;
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    left: 220px;
+}
+
+.photo_link_out {
+    color: black;
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    left: 100px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+
+.login button {
+    width: 100%;
+    margin-top: 5px !important;
+}
+
+.form-add-photo form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid darkcyan;
+
+}
+
+.form-add-photo form .item {
+    margin-bottom: 20px !important;
+}
+
+
+
+/* Стили для главной страницы*/
+
+.main-content{
+    text-align: center !important;
+    display: flex;
+    color: rgb(224, 209, 209);
+    flex-direction: column;
+}
+
+.main-content .content {
+    text-align: center;
+    margin: 50px !important;
+}
+
+.main-content h3 {
+    font-size:40px;
+}
+
+.main-content p {
+    font-size: 20px;
+}
+
+/* Стили для карусели(слайдера) */
+
+.container {
+    width: auto;
+    margin: 0 auto !important;
+    
+}
+
+.container .slider{
+    position: relative;
+    background-color: blueviolet;
+    margin-bottom: 50vh !important;
+}
+
+.container .slider .button {
+    position: absolute;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 30px;
+    background-color: gray;
+}
+
+.container .slider .button:hover{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.container .slider .button:active {
+    background-color: whitesmoke;
+}
+
+.container .slider .btn-left {
+    bottom: 0;
+    left: -150px;
+}
+
+.container .slider .btn-right {
+    bottom: 0;
+    right: -150px;
+}
+
+
+
+
+/*Стили для формы отзывов*/
+
+.feedbacks {
+    margin-top: 50px !important;
+    min-height: 25vh;
+}
+
+.feedbacks h1 {
+    text-align: center;
+}
+
+.feedback {
+    margin: 25px !important;
+    background-color: rgba(165, 42, 42, 0.5);
+    color:black;
+}
+
+.feedback .id, 
+.feedback .text,
+.feedback .name,
+.feedback .date {
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+}
+
+.feedback .date {
+    text-align: right;
+    margin-right: 20px !important;
+    margin-bottom: 10px !important;
+}
+
+
+.addFeedback {
+    display: flex;  
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25vh !important;
+}
+
+.addFeedback h2 {
+    text-align: center;
+}
+
+.addFeedback input {
+   width: 100%;
+   text-decoration: none;
+   outline: none;
+   border: none;
+   border-bottom: 2px solid black;
+   background:rgba(128, 128, 128, 0);
+   color: brown;
+   margin-bottom: 10px !important;
+}
+
+.addFeedback textarea {
+    outline: none;
+    background-color: rgba(114, 79, 79, 0.1);
+    border:none;
+    color: brown;
+}
+
+.addFeedback button {
+    border: none;
+    width: 100%;
+    padding: 5px !important;
+}
+
+/* Стили для страницы о себе*/
+
+.about {
+    margin: 0 auto !important;
+    margin-top: 120px !important;
+    width: 50%;
+    border: 2px groove whitesmoke;
+    background-color: rgba(245, 245, 245, 0.158);
+}
+
+.about .text {
+    color:rgb(224, 209, 209);
+    text-align: center;
+}
+
+#about-head {
+    text-align: center;
+    margin-top: 10vh !important;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    h1, h2, h3, h4{
+        letter-spacing: 0x !important;
+    }
+
+
+    header .main-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:cover;
+        cursor: pointer;  
+    }
+
+    #menu {
+        width: 250px;
+        height: 90%;
+        background: #000;
+        position: absolute;
+        left: -220px;
+        top: 0;
+        transition: all ease 1s;
+        z-index: 2;
+    }
+    .changeDesign {
+        top: 20px;
+    }
+
+    header .main-menu li{
+        display: none;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 60px;
+    }
+
+
+    header .main-menu .galery-button:hover .list-menu {
+        display: block;
+        background-color: rgba(131, 126, 126, 1);
+        left: 150px;    
+    }
+
+    header .main-menu:hover li {
+        display: flex;
+        background: rgba(128, 128, 128, 0.521);
+    }
+
+    header li:hover {
+        display: flex;
+    }
+
+    footer .container .socialButton a{
+        margin-right: 15px !important;
+    }
+
+    .form-registration .container input {
+        width: 100%;
+    }
+    .form-registration .container button {
+        width: 100%;
+    }
+
+    .main .container-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+  
+    .table-header {
+        display: none;
+    }
+
+    /* --------------------------------- */
+
+    .container .slider{
+        position: relative;
+        background-color: blueviolet;
+        margin-bottom: 50vh !important;
+        width: 25ch;
+    }
+    
+    .container .slider .button {
+        position: absolute;
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 30px;
+        background-color: gray;
+    }
+
+    .container .slider .slide {
+       width: 25ch;
+    }
+
+    
+    
+    .container .slider .button:hover{
+        background-color: rgba(128, 128, 128, 0.5);
+    }
+    
+    .container .slider .button:active {
+        background-color: whitesmoke;
+    }
+    
+    .container .slider .btn-left {
+        bottom: 0;
+        left: -50px;
+    }
+    
+    .container .slider .btn-right {
+        bottom: 0;
+        right: -50px;
+    }
+
+    /* -------------------------------- */
+ 
+    .contact {
+        margin-bottom: 150px !important;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .about .text {
+        font-size: 12px;
+    }
+}
